@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  my_server:
+    build: ./app
+    stdin_open: true
+    tty: true
+    ports:
+      - 3434:3434
+      - 6379:6379
+
+  my_data:
+    image: redis
